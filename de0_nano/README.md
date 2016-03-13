@@ -12,6 +12,8 @@ computer. If you want to use UART, an extra dongle is needed. Any
 USB-UART adapter can be used. You need to connect it to the header on
 the bottom of the board as depicted below.
 
+(missing figure)
+
 ### Download the FPGA bitstream
 
 Once the board is setup, you can download the FPGA bitstream by
