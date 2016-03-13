@@ -1,26 +1,29 @@
+# OpenRISC Tutorials
+
 This repository contains instructions for building and running
 tutorials with the OpenRISC processor.
 
-The following steps are common to the different supported boards. When
-running from a release archive (`openrisc-tutorials_*.tgz`), you will
-only need OpenOCD and the toolchain if you want to build software
-yourself. You can find more dependencies in the list below.
+The following steps are common to the different supported simulations
+and boards. When you have downloaded a release archive
+(`openrisc-tutorials_*.tgz`), you will only need OpenOCD, and
+optionally the toolchain if you want to build software yourself. You
+can find more dependencies in the list below.
 
 Once you have installed the general pre-requisites, you can do the
 following tutorials.
 
-* [Terasic DE0 nano board](de0_nano/README.md)
-  * For running: OpenOCD
+* [Terasic DE0 nano board](de0_nano/README.md), dependencies:
+  * For running: [OpenOCD](#openocd)
   * For building software: Toolchain
   * For building hardware: FuseSoC, Altera Quartus Prime
 
 ## OpenOCD
 
-The OpenOCD version delivered with the Linux distributions is most
-probably outdated. Hence, you can quickly install a current version
-inside the tutorials:
+The [OpenOCD](http://www.openocd.org) version delivered with the Linux
+distributions is most probably outdated. Hence, you can quickly
+install a current version inside the tutorials:
 
-	make openoce
+	make openocd
 	export OPENOCD=`pwd`/openocd
 
 ## Toolchain
@@ -51,3 +54,22 @@ OpenRISC. You can install it as described
 
 ## Altera Quartus Prime
 
+This is the software which compiles RTL and ultimately generates an
+FPGA programming file. Unfortunately this software is closed source,
+extremely large, and requires registration to download. However, it is
+required.
+
+For downloading the free version, visit the
+[Altera website](http://dl.altera.com/?edition=lite) and
+[download the latest version of Quartus Prime Lite](http://download.altera.com/akdlm/software/acdsinst/15.1/185/ib_tar/Quartus-lite-15.1.0.185-linux.tar). It
+is 4.5GB in size and will obviously take a while to download. Once it
+is downloaded, extract it and run the setup.sh file in there. Install
+it to any location (e.g. `/opt/altera/lite`).
+
+After installation add the following path (corrected for your
+installation) to the search path:
+
+	export PATH=/opt/altera/lite/15.1/quartus/bin/:$PATH
+
+*Note:* Make sure you select to include the Cyclone IV E device
+ families during installation.
