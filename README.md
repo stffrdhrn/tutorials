@@ -13,9 +13,9 @@ Once you have installed the general pre-requisites, you can do the
 following tutorials.
 
 * [Terasic DE0 nano board](de0_nano/README.md), dependencies:
-  * For running: [OpenOCD](#openocd)
-  * For building software: Toolchain
-  * For building hardware: FuseSoC, Altera Quartus Prime
+  * For running: [OpenOCD](#openocd), [toolchain](#toolchain),
+    [Altera Quartus Prime](#altera-quartus-prime)
+  * For building hardware: [FuseSoC](#fusesoc)
 
 ## OpenOCD
 
