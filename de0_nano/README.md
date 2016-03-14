@@ -10,15 +10,15 @@ To run the demo you need:
 
 * `quartus_pgm` in your `PATH`, check with
 
-    which quartus_pgm
+        which quartus_pgm
 
 * `$OPENOCD` set, check with
 
-	$OPENOCD/src/openocd --version
+        $OPENOCD/src/openocd --version
 
 * `or1k-elf-gdb` in your `PATH`, check with
 
-    or1k-elf-gdb --version
+        or1k-elf-gdb --version
 
 ### Setup the board
 
