@@ -61,4 +61,8 @@ To build the kernel
 
 `make`
 
-The kernel image is now available as vmlinux
+The kernel image is now available as an elf file called `vmlinux`. This file can be used as any other bare-metal program for OpenRISC. To test the Linux image, you can:
+* Run it in the reference C simulator (or1ksim)
+* Run it on a simulated RTL model (Most likely extremely slow, unless using verilator)
+* [Load it to RAM on an FPGA board with a debugger](Debugging.md)
+* Program it to non-volatile flash on an FPGA board
