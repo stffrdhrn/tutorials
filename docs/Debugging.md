@@ -3,9 +3,9 @@
 The OpenRISC cpu, simulator and toolchain provide a full debugging
 environment with gdb and OpenOCD.  At a low level this is provided with
 [adv_debug_sys](https://github.com/olofk/adv_debug_sys) which provides
-jtag interface for OpenOCD to talk to.  Much debugging can be done
-directly in OpenOCD.  GDB communicates with OpenOCD to provide a familiar
-debugging environment for programmers. 
+jtag interface for OpenOCD to talk to.  Much can be done directly in OpenOCD.  
+But for a full debug environments we recommend GDB. GDB communicates with OpenOCD
+as a remote target and provides a familiar debugging environment for programmers. 
 
 ### OpenOCD Basics
 
@@ -13,8 +13,10 @@ OpenOCD requires a configuration file to start up.  The configuration files
 speicify the chips details (jtag tap) and the details of the interface we are 
 using.
 
-You can also specify init and reset hooks for extra operations to perform to 
-propertly refresh and initialize your system.  
+You can also define `init` and `reset` hooks to perform extra operations to 
+propertly refresh and initialize your system. See details on the OpenOCD user
+guide on 
+[Target Events](http://openocd.org/doc/html/CPU-Configuration.html#targetevents).
 
 ```
 # command for starting openocd when connecting to openrisc on the altera de0 nano
@@ -40,7 +42,7 @@ Once started OpenOCD will start listening on 2 TCP ports
  * 4444 - OpenOCD telnet interface
  * 3333 - GDB target interface
 
-You can connect to the telnet interface and do things such as follows
+You can connect to the 4444 telnet interface and do things such as follows
 
 ```
 # Telnet to OpenOCD
@@ -56,7 +58,6 @@ requesting target halt and executing a soft reset
 
 # Halt the cpu
 halt
-
 
 # Load an image (the image location is relative to the working directory of openocd)
 load_image tutorials/de0_nano/hello.elf
@@ -163,12 +164,15 @@ Dump of assembler code for function main:
 End of assembler dump.         
 
 # Inspecing Registers
+
+## Inspecting a single register
 info reg r1
+
 r1             0x1ffdff0        33546224
 
-# Listing all general registers. 
-
+## Listing all general registers. 
 info reg
+
 r0             0x0      0                 (always zero)
 r1             0x1ffdff0        33546224  (stack pointer)
 r2             0x1ffe000        33546240  (frame pointer)
@@ -202,7 +206,7 @@ r29            0x0      0
 r30            0x0      0
 r31            0x0      0
 
-# Listing all special register groups
+## Listing all special register groups
 maint print reggroups
 
 Group      Type      
@@ -218,7 +222,7 @@ Group      Type
  pic        user      
  timer      user   
 
-# Listing registers in a register group
+## Listing registers in a register group
 info reg system
 
 vr             0x10000040       268435520
@@ -232,13 +236,13 @@ dcfgr          0x0      0
 
 # Inspecing Memory
 
-# print 32 hex words of memory contents at location
+## print 32 hex words of memory contents at location
 x/10xw 0x1ffdff0
 0x1ffdff0:      0x00000000      0x00000000      0x01ffe000      0x00002130
 0x1ffe000:      0xc1fffe92      0x00000004      0xc1fff930      0xc1ffe034
 0x1ffe010:      0x00000000      0x00000000
 
-# print 3 instructions at location
+## print 3 instructions at location
 x/3ih 0x100
    0x100 <_or1k_reset>: l.movhi r0,0x0
    0x104 <_or1k_reset+4>:       l.movhi r1,0x0
