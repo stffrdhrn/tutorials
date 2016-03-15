@@ -10,7 +10,7 @@ as a remote target and provides a familiar debugging environment for programmers
 ### OpenOCD Basics
 
 OpenOCD requires a configuration file to start up.  The configuration files 
-speicify the chips details (jtag tap) and the details of the interface we are 
+specify the chips details (jtag tap) and the details of the interface we are 
 using.
 
 You can also define `init` and `reset` hooks to perform extra operations to 
