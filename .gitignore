@@ -1,0 +1,5 @@
+*~
+*.tgz
+vmlinux
+*.sof
+*.elf
