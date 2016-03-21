@@ -73,7 +73,31 @@ path:
 
 FuseSoC is an automated build environment and package manager for
 OpenRISC. You can install it as described
-[here](https://github.com/olofk/fusesoc).
+[here](https://github.com/olofk/fusesoc) (recommended) or use the
+prebuilt binaries:
+
+	make fusesoc-download
+
+You can also built it in this tutorial path:
+
+    make fusesoc-build
+
+### or1ksim
+
+or1ksim is the OpenRISC instruction set simulator. You can download
+the prebuilt binary:
+
+    make or1ksim-download
+
+or build it here:
+
+    make or1k-build
+
+### Linux
+
+There is a prebuilt Linux image you can simply download:
+
+    make linux-download
 
 ### Altera Quartus Prime
 
