@@ -4,6 +4,7 @@ make toolchain-baremetal
 make openocd-download
 make fusesoc-download
 make or1ksim-download
+make linux-download
 
 echo "++++++++++++++++++++++++++++++++++++++++++++++"
 echo "++ Quick Start Bootstrap completed"
