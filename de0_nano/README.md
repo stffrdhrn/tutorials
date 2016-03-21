@@ -29,12 +29,12 @@ the bottom of the board as depicted below.
 
 ![uart](doc/uart.png "Connect UART to board")
 
-### Download the FPGA bitstream
+### Program the FPGA bitstream
 
 Once the board is setup, you can download the FPGA bitstream by
 running
 
-	make download
+	make program
 
 ### Start the OpenOCD daemon
 
