@@ -12,9 +12,10 @@ To run the demo you need:
 
         which quartus_pgm
 
-* `$OPENOCD` set, check with
+* `openocd` in your `PATH` and `OPENOCD` set, check with
 
-        $OPENOCD/src/openocd --version
+        openocd --version
+        echo $OPENOCD
 
 * `or1k-elf-gdb` in your `PATH`, check with
 
@@ -40,7 +41,7 @@ running
 
 In one terminal execute the following command:
 
-	$OPENOCD/src/openocd -s $OPENOCD/tcl -f $OPENOCD/tcl/interface/altera-usb-blaster.cfg -f ../or1k-dev.tcl
+	openocd -s ${OPENOCD}/share/openocd/scripts/ -f interface/altera-usb-blaster.cfg -f ../or1k-dev.tcl 
 
 ### Run software with gdb
 
