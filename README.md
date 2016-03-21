@@ -2,11 +2,38 @@
 
 These are tutorials for the OpenRISC processor. The simulations run on
 different FPGA boards and simulators. Hence, the different tutorials
-have different requirements, which you can find in the list below.
+have different requirements, which you can find in the list below. If
+you have downloaded the tutorials and are new to OpenRISC, you
+probably want the real [quick start](#quick-start).
 
+## Quick Start
 
-Once you have installed the general pre-requisites, you can do the
-following tutorials.
+This is the real quick start if you have downloaded and extracted the
+tutorials. The output files are already part of what you have
+downloaded, but you still need some tools. You can install prebuilt
+versions of them:
+
+    ./bootstrap-quick-start.sh
+
+This downloads all free and open tools. Unfortunately, you will still
+need to install closed (but free) tools from the FPGA vendors:
+
+* [Altera Quartus Prime](#altera-quartus-prime) for Altera FPGAs
+  ([DE0 nano](de0_nano/README.md).
+
+You can now start with the [tutorials](#tutorials).
+
+## Set Environment
+
+Once you have installed the dependencies, you can do the following
+tutorials. For convenience, you can set the environment variables for
+all tools downloaded and installed automatically:
+
+    source environment.sh
+
+## Tutorials
+
+The following tutorials are available:
 
 * [Terasic DE0 nano board](de0_nano/README.md), dependencies:
   * For running: [OpenOCD](#openocd), [toolchain](#toolchain),
