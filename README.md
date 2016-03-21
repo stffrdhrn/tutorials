@@ -40,6 +40,16 @@ The following tutorials are available:
     [Altera Quartus Prime](#altera-quartus-prime)
   * For building hardware: [FuseSoC](#fusesoc)
 
+### Debug Environment
+
+The OpenRISC cpu, simulator and toolchain provide a full debugging
+environment with gdb and OpenOCD.  At a low level this is provided with
+[adv_debug_sys](https://github.com/olofk/adv_debug_sys) which provides
+jtag interface for OpenOCD to talk to.  Much debugging can be done
+directly in OpenOCD.  GDB communicates with OpenOCD to provide a familiar
+debugging environment for programmers.  For more details see:
+
+ * [Debugging OpenRISC](docs/Debugging.md)
 
 ## Tools (partially required)
 
@@ -120,14 +130,3 @@ installation) to the search path:
 
 *Note:* Make sure you select to include the Cyclone IV E device
  families during installation.
-
-### Debug Environment
-
-The OpenRISC cpu, simulator and toolchain provide a full debugging 
-environment with gdb and OpenOCD.  At a low level this is provided with 
-[adv_debug_sys](https://github.com/olofk/adv_debug_sys) which provides
-jtag interface for OpenOCD to talk to.  Much debugging can be done 
-directly in OpenOCD.  GDB communicates with OpenOCD to provide a familiar
-debugging environment for programmers.  For more details see: 
-
- * [Debugging OpenRISC](docs/Debugging.md)

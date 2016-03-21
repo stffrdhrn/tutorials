@@ -67,6 +67,7 @@ You can rebuilt the hardware by running:
 
 ## (Re-)build the software
 
-Some example software is available, that you can (re-)build for the DE0 nano board by running
+Some example software is available, that you can (re-)build for the
+DE0 nano board by running
 
 	make build-sw
