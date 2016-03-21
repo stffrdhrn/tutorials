@@ -33,7 +33,16 @@ all tools downloaded and installed automatically:
 
 ## Tutorials
 
-The following tutorials are available:
+There are simulations and FPGA boards supported, and some general
+tutorials help you working with the OpenRISC ecosystem.
+
+### Simulations
+
+* [or1ksim](or1ksim/README.md), dependencies:
+  * For running: [or1ksim](#or1ksim)
+  * For building own software: [toolchain](#toolchain)
+
+### FPGA Boards
 
 * [Terasic DE0 nano board](de0_nano/README.md), dependencies:
   * For running: [OpenOCD](#openocd), [toolchain](#toolchain),
