@@ -1,13 +1,9 @@
 # OpenRISC Tutorials
 
-This repository contains instructions for building and running
-tutorials with the OpenRISC processor.
+These are tutorials for the OpenRISC processor. The simulations run on
+different FPGA boards and simulators. Hence, the different tutorials
+have different requirements, which you can find in the list below.
 
-The following steps are common to the different supported simulations
-and boards. When you have downloaded a release archive
-(`openrisc-tutorials_*.tgz`), you will only need OpenOCD, and
-optionally the toolchain if you want to build software yourself. You
-can find more dependencies in the list below.
 
 Once you have installed the general pre-requisites, you can do the
 following tutorials.
@@ -17,16 +13,22 @@ following tutorials.
     [Altera Quartus Prime](#altera-quartus-prime)
   * For building hardware: [FuseSoC](#fusesoc)
 
-## OpenOCD
+
+## Tools (partially required)
+
+### OpenOCD
 
 The [OpenOCD](http://www.openocd.org) version delivered with the Linux
 distributions is most probably outdated. Hence, you can quickly
 install a current version inside the tutorials:
 
-	make openocd
-	export OPENOCD=`pwd`/openocd
+	make openocd-download
 
-## Toolchain
+In case you cannot start openocd, you may rebuilt it also:
+
+    make openocd-build
+
+### Toolchain
 
 The OpenRISC software tool chain consists of all the tools require to
 compile and manipulate software for the platform. Specifically, the
@@ -38,21 +40,15 @@ You will need the toolchain if you want to compile software. The quick
 way just to play around with this tutorials is to run from the base
 path:
 
-	make toolchain
-	export PATH=`pwd`/or1k-elf/bin:${PATH}
+	make toolchain-baremetal
 
-After downloading, you can also move the toolchain to a global path in
-your filesystem, we recommend `/opt/toolchains/or1k-elf`, or even
-[build](http://openrisc.io/newlib/building.html) the toolchain
-yourself.
-
-## FuseSoC
+### FuseSoC
 
 FuseSoC is an automated build environment and package manager for
 OpenRISC. You can install it as described
 [here](https://github.com/olofk/fusesoc).
 
-## Altera Quartus Prime
+### Altera Quartus Prime
 
 This is the software which compiles RTL and ultimately generates an
 FPGA programming file. Unfortunately this software is closed source,
@@ -74,7 +70,7 @@ installation) to the search path:
 *Note:* Make sure you select to include the Cyclone IV E device
  families during installation.
 
-## Debug Environment
+### Debug Environment
 
 The OpenRISC cpu, simulator and toolchain provide a full debugging 
 environment with gdb and OpenOCD.  At a low level this is provided with 
