@@ -110,7 +110,7 @@ the prebuilt binary:
 
 or build it here:
 
-    make or1k-build
+    make or1ksim-build
 
 ### Linux
 
