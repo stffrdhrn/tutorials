@@ -70,6 +70,11 @@ reg npc 0x100
 # Resume execution after a halt
 resume
 
+# For loading a linux image you can do it all at one time. 
+# Notice here we also reset r3 which linux uses as a bootargs
+# vector.
+halt; load_image vmlinux; reg r3 0; reg npc 0x100; resume
+
 # Inspect registers
 reg npc
 

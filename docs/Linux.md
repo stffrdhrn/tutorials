@@ -61,6 +61,14 @@ To build the kernel
 
 `make`
 
+To load the kernel and start running it in openOCD run
+
+```
+init
+reset
+halt; load_image vmlinux; reg r3 0; reg npc 0x100; resume
+```
+
 The kernel image is now available as an elf file called `vmlinux`. This file can be used as any other bare-metal program for OpenRISC. To test the Linux image, you can:
 * Run it in the reference C simulator (or1ksim)
 * Run it on a simulated RTL model (Most likely extremely slow, unless using verilator)
