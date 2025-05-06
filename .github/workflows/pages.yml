@@ -4,11 +4,13 @@
 # documentation.
 
 # Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll site to Pages
+name: Deploy OpenRISC tutorials site to Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: 
+      - master
+      - just-the-docs
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
