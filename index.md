@@ -1,3 +1,10 @@
+---
+title: Home
+layout: home
+nav_order: 1
+permalink: /
+---
+
 # OpenRISC Tutorials
 
 These are tutorials for the OpenRISC processor. The simulations run on
