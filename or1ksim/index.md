@@ -1,3 +1,8 @@
+---
+title: or1ksim
+layout: page
+---
+
 # or1ksim Tutorial
 
 If you downloaded the tutorials as a release archive, you can directly

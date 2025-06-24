@@ -1,4 +1,6 @@
-title: OpenRISC Tutorial Page
+title: OpenRISC Tutorials
 theme: just-the-docs
 color_scheme: dark
 repository: openrisc/tutorials
+
+include: ['debugging', 'de0_nano', 'docs', 'or1ksim', 'platform', 'sw']

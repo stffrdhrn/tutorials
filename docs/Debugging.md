@@ -1,3 +1,8 @@
+---
+title: Debugging
+layout: home
+---
+
 ## Debugging OpenRISC
 
 The OpenRISC cpu, simulator and toolchain provide a full debugging

@@ -1,3 +1,8 @@
+---
+title: Linux
+layout: home
+---
+
 ## Build OpenRISC linux image
 
 ### Prerequisites
